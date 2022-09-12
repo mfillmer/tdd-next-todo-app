@@ -9,6 +9,7 @@ const TaskInput = ({
 }) => {
   return (
     <input
+      className='input input-bordered flex-1'
       onChange={(e) => onChange(e.currentTarget.value)}
       value={value}
       type='text'

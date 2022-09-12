@@ -22,14 +22,16 @@ export default function Home() {
     setTasks(tasks.filter((_, i) => i !== index))
   }
   return (
-    <>
+    <main className='w-full max-w-[80ch] break-words mx-auto p-4'>
       <Header />
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form
+        className='form flex space-x-2 items-center'
+        onSubmit={(e) => e.preventDefault()}>
         <TaskInput value={input} onChange={setInput} />
         <PrioCheckbox checked={isPrio} onCheck={() => setIsPrio(!isPrio)} />
         <AddTaskButton onClick={() => addTask()} />
       </form>
       <TaskList removeTask={removeTask} tasks={tasks} />
-    </>
+    </main>
   )
 }

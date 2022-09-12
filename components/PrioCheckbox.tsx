@@ -8,16 +8,19 @@ const PrioCheckbox = ({
   onCheck: () => void
 }) => {
   return (
-    <label htmlFor='prio'>
-      <span>Priority</span>
-      <input
-        checked={checked}
-        onChange={onCheck}
-        type='checkbox'
-        name='prio'
-        id='prio'
-      />
-    </label>
+    <div className='form-control'>
+      <label htmlFor='prio' className='label cursor-pointer space-x-1'>
+        <span>Priority</span>
+        <input
+          className='toggle'
+          checked={checked}
+          onChange={onCheck}
+          type='checkbox'
+          name='prio'
+          id='prio'
+        />
+      </label>
+    </div>
   )
 }
 
