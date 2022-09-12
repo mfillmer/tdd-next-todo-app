@@ -2,10 +2,13 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <nav>
-      <Link href='/about'>
-        <a>About</a>
-      </Link>
-    </nav>
+    <>
+      <h1>Welcome to Next.js!</h1>
+      <nav>
+        <Link href='/about'>
+          <a>About</a>
+        </Link>
+      </nav>
+    </>
   )
 }
